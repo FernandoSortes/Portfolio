@@ -1,0 +1,516 @@
+/* =====================================================
+   style.css - estilos personalizados do portfólio
+   O Bootstrap cuida do básico (grade, botões, formulários).
+   Aqui ficam as cores, os espaçamentos e os detalhes do meu visual.
+   Estilo Mobile First: as regras normais valem para o celular
+   e os @media (min-width) ajustam para telas maiores.
+   ===================================================== */
+
+/* ---------- Cores do site (variáveis CSS) ----------
+   Para mudar uma cor em todo o site, basta alterar aqui. */
+:root {
+    --tinta: #1c2b36;          /* azul-petróleo escuro (menu, topo, rodapé) */
+    --tinta-clara: #2c4150;
+    --destaque: #3bb3a5;       /* verde-azulado usado em detalhes */
+    --destaque-escuro: #0f766e;/* versão mais escura, para botões e textos */
+    --fundo: #ffffff;
+    --fundo-claro: #f3f5f6;
+    --texto: #1f2933;
+    --texto-suave: #52606d;
+    --borda: #d9dee2;
+}
+
+/* ---------- Base ---------- */
+html {
+    scroll-behavior: smooth;   /* rolagem suave ao clicar nos links do menu */
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--destaque-escuro);
+}
+
+/* Foco visível para quem navega pelo teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 2px;
+}
+
+/* ---------- Menu ---------- */
+.barra-menu {
+    background: var(--tinta);
+}
+
+/* ---------- Topo (hero) ---------- */
+.hero {
+    background: var(--tinta);
+    color: #ffffff;
+    padding: 6.5rem 0 3.5rem;   /* o espaço de cima compensa o menu fixo */
+}
+
+.hero-comentario {
+    font-family: Consolas, "Courier New", monospace;  /* parece um comentário de código */
+    color: var(--destaque);
+    margin-bottom: 0.25rem;
+}
+
+.hero-nome {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitulo {
+    font-size: 1.1rem;
+    color: #dbe4ea;
+    margin-bottom: 0.25rem;
+}
+
+.hero-local {
+    color: #aebcc6;
+    margin-bottom: 0;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--destaque);
+    background: #e2e8f0;
+}
+
+/* Única animação de entrada do site: o topo aparece suavemente */
+.hero .row {
+    animation: aparecer 0.8s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Botões ---------- */
+.btn-principal {
+    background: var(--destaque);
+    color: #0f1f27;
+    border: 1px solid var(--destaque);
+    font-weight: 600;
+}
+.btn-principal:hover {
+    background: #5cc8bb;
+    border-color: #5cc8bb;
+    color: #0f1f27;
+}
+
+.btn-principal-escuro {
+    background: var(--destaque-escuro);
+    color: #ffffff;
+    border: 1px solid var(--destaque-escuro);
+}
+.btn-principal-escuro:hover {
+    background: #0b5c56;
+    border-color: #0b5c56;
+    color: #ffffff;
+}
+
+.btn-outline-escuro {
+    background: transparent;
+    color: var(--tinta);
+    border: 1px solid var(--tinta);
+}
+.btn-outline-escuro:hover {
+    background: var(--tinta);
+    color: #ffffff;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+    padding: 3.5rem 0;
+    scroll-margin-top: 56px;   /* evita que o menu fixo cubra o título ao clicar no link */
+}
+
+.secao-clara {
+    background: var(--fundo-claro);
+}
+
+.titulo-secao {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--destaque);
+    display: inline-block;
+}
+
+.introducao-secao {
+    color: var(--texto-suave);
+    max-width: 65ch;
+    margin-bottom: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* ---------- Sobre mim ---------- */
+.caixa-formacao {
+    background: var(--fundo-claro);
+    border-left: 4px solid var(--destaque);
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.9rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.caixa-formacao p {
+    color: var(--texto-suave);
+}
+
+/* Lista de hard skills usando Flexbox */
+.lista-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-skills li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.nivel {
+    font-size: 0.85rem;
+    color: var(--destaque-escuro);
+    border: 1px solid var(--destaque-escuro);
+    border-radius: 20px;
+    padding: 0.05rem 0.7rem;
+}
+
+/* Lista de soft skills usando Flexbox */
+.lista-soft {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.lista-soft li {
+    background: var(--fundo-claro);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.95rem;
+}
+
+.links-contato {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+
+/* ---------- Cursos e certificados (CSS Grid) ---------- */
+.texto-suave-pequeno {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.lista-certificados {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;   /* celular: 1 coluna */
+    gap: 0.9rem;
+}
+
+.certificado {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: var(--fundo-claro);
+    border-left: 4px solid var(--destaque);
+    border-radius: 0 6px 6px 0;
+    padding: 0.9rem 1rem;
+}
+
+.certificado span {
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+}
+
+.certificado .id-certificado {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.78rem;
+    word-break: break-all;      /* o código é longo: não estoura a tela no celular */
+}
+
+.certificado a {
+    margin-top: 0.3rem;
+    font-weight: 600;
+}
+
+/* ---------- Áreas do conhecimento ---------- */
+.area {
+    padding: 2rem 0;
+    border-top: 1px solid var(--borda);
+    scroll-margin-top: 56px;
+}
+
+.area h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.disciplinas {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ---------- Tendências tecnológicas (usando CSS Grid) ---------- */
+.grade-tendencias {
+    display: grid;
+    grid-template-columns: 1fr;   /* celular: 1 coluna */
+    gap: 1.25rem;
+}
+
+.cartao-tendencia {
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-top: 4px solid var(--destaque);
+    border-radius: 6px;
+    padding: 1.25rem;
+    scroll-margin-top: 70px;
+}
+
+.cartao-tendencia h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.cartao-tendencia h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--destaque-escuro);
+    margin: 0.9rem 0 0.15rem;
+}
+
+.cartao-tendencia p {
+    margin-bottom: 0;
+    color: var(--texto-suave);
+}
+
+/* ---------- Galeria de projetos ---------- */
+.img-projeto {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top left;   /* mostra o começo da página capturada */
+    display: block;
+    background: var(--fundo-claro);
+}
+
+.card {
+    border-color: var(--borda);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-pequeno .card-title {
+    font-size: 1rem;
+}
+
+.card-pequeno .card-text {
+    font-size: 0.92rem;
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 1px solid var(--borda);
+}
+
+/* Efeito discreto só nos cartões dos projetos */
+.card-projeto {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-projeto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(28, 43, 54, 0.15);
+}
+
+.card-projeto .card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-projeto .tecnologias {
+    margin-top: auto;     /* empurra as etiquetas para o fim do cartão */
+    margin-bottom: 0;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.badge-tec {
+    font-size: 0.8rem;
+    background: var(--fundo-claro);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    padding: 0.05rem 0.5rem;
+    color: var(--tinta-clara);
+}
+
+.link-repo {
+    font-weight: 600;
+    text-decoration: none;
+}
+.link-repo:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Formulário de contato ---------- */
+.form-control:focus {
+    border-color: var(--destaque-escuro);
+    box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.2);
+}
+
+/* ---------- Rodapé e botão de topo ---------- */
+.rodape {
+    background: var(--tinta);
+    color: #c3ced6;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.botao-topo {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: var(--destaque-escuro);
+    color: #ffffff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;            /* escondido até o visitante rolar a página */
+}
+.botao-topo.visivel {
+    display: block;
+}
+
+/* ---------- Painel administrativo ---------- */
+.admin {
+    min-height: 100vh;
+    background: var(--fundo-claro);
+}
+
+.caixa-login {
+    max-width: 380px;
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 1.25rem;
+}
+
+.tabela-mensagens {
+    background: var(--fundo);
+    font-size: 0.92rem;
+}
+
+.tabela-mensagens th {
+    white-space: nowrap;
+}
+
+.caixa-admin {
+    margin-top: 1rem;
+}
+
+.detalhe-linha {
+    margin-bottom: 0.5rem;
+}
+
+.texto-mensagem {
+    white-space: pre-wrap;   /* mantém as quebras de linha digitadas */
+    background: var(--fundo-claro);
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+
+/* =====================================================
+   TELAS MAIORES (Mobile First: só aumentamos o que for preciso)
+   ===================================================== */
+
+/* Tablets (a partir de 768px) */
+@media (min-width: 768px) {
+    .hero {
+        padding: 8rem 0 5rem;
+    }
+    .hero-nome {
+        font-size: 2.8rem;
+    }
+    .foto-perfil {
+        width: 280px;
+        height: 280px;
+    }
+    .titulo-secao {
+        font-size: 2rem;
+    }
+    .secao {
+        padding: 4.5rem 0;
+    }
+    /* Certificados: 3 colunas */
+    .lista-certificados {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Tendências: 2 colunas */
+    .grade-tendencias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* No cartão em destaque, a imagem ocupa toda a altura */
+    .projeto-destaque .img-projeto {
+        aspect-ratio: auto;
+        height: 100%;
+        min-height: 260px;
+    }
+}
+
+/* Quem prefere menos movimento: desliga as animações */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .hero .row {
+        animation: none;
+    }
+    .card-projeto {
+        transition: none;
+    }
+    .card-projeto:hover {
+        transform: none;
+    }
+}

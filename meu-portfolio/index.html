@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport: necessário para o layout responsivo (Mobile First) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfólio web de Fernando Sortes Fernandes, estudante de Tecnologia da Informação em busca da primeira oportunidade em desenvolvimento de software.">
+    <title>Fernando Sortes Fernandes | Portfólio</title>
+
+    <!-- Bootstrap 5 (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Meu CSS (vem depois do Bootstrap para poder sobrescrever as regras dele) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======================================================
+     TUDO que é o site público fica dentro desta div.
+     O painel administrativo (mais embaixo) fica fora dela.
+     ====================================================== -->
+<div id="site">
+
+    <!-- ================= MENU DE NAVEGAÇÃO ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top barra-menu">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="#inicio">Fernando Sortes</a>
+
+            <!-- Botão que aparece no celular para abrir/fechar o menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
+
+                    <!-- Menu com as 4 áreas do conhecimento -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#conhecimento" role="button" data-bs-toggle="dropdown" aria-expanded="false">Áreas do Conhecimento</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#humanas">Ciências Humanas</a></li>
+                            <li><a class="dropdown-item" href="#natureza">Ciências da Natureza</a></li>
+                            <li><a class="dropdown-item" href="#matematica">Matemática</a></li>
+                            <li><a class="dropdown-item" href="#linguagens">Linguagens</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu com as 4 tendências tecnológicas -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#tendencias" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tendências</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#ciberseguranca">Cibersegurança</a></li>
+                            <li><a class="dropdown-item" href="#blockchain">Blockchain</a></li>
+                            <li><a class="dropdown-item" href="#automacao">Automação e Robótica</a></li>
+                            <li><a class="dropdown-item" href="#edge">Edge Computing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ================= 1) APRESENTAÇÃO PESSOAL ================= -->
+        <header id="inicio" class="hero">
+            <div class="container">
+                <div class="row align-items-center g-4">
+
+                    <!-- Foto: no celular aparece primeiro; no computador fica à direita -->
+                    <div class="col-md-5 order-md-2 text-center">
+                        <!-- Foto de perfil (para trocar, substitua o arquivo em assets/imagens/) -->
+                        <img src="assets/imagens/foto-fernando.jpg"
+                             alt="Foto de Fernando Sortes Fernandes sorrindo, de óculos, com o mar ao fundo"
+                             class="foto-perfil" width="280" height="280">
+                    </div>
+
+                    <div class="col-md-7 order-md-1">
+                        <p class="hero-comentario">// olá, eu sou</p>
+                        <h1 class="hero-nome">Fernando Sortes Fernandes</h1>
+                        <p class="hero-subtitulo">
+                            Estudante de Tecnologia da Informação, interessado em desenvolvimento de software.
+                        </p>
+                        <p class="hero-local">São Paulo - SP</p>
+
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <a href="#projetos" class="btn btn-principal">Ver projetos</a>
+                            <a href="#contato" class="btn btn-outline-light">Entrar em contato</a>
+                            <a href="https://github.com/FernandoSortes" target="_blank" rel="noopener" class="btn btn-outline-light">GitHub</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <section id="sobre" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Sobre mim</h2>
+
+                <div class="row g-4">
+                    <!-- Perfil profissional -->
+                    <div class="col-lg-7">
+                        <h3 class="subtitulo">Perfil profissional</h3>
+                        <p>
+                            Sou estudante do Ensino Médio Técnico em Tecnologia da Informação e pretendo cursar
+                            Engenharia de Software. Tenho interesse principalmente no desenvolvimento Back-end,
+                            com o objetivo de evoluir para Full Stack.
+                        </p>
+                        <p>
+                            Possuo conhecimentos básicos em Java, HTML, CSS e Python, além de conhecimentos iniciais
+                            em JavaScript. Gosto de desenvolvimento de sites, programação e criação de soluções tecnológicas.
+                        </p>
+
+                        <h3 class="subtitulo mt-4">Objetivo profissional</h3>
+                        <p>Conseguir minha primeira oportunidade na área de desenvolvimento de software.</p>
+                    </div>
+
+                    <!-- Formação -->
+                    <div class="col-lg-5">
+                        <h3 class="subtitulo">Formação</h3>
+                        <div class="caixa-formacao">
+                            <strong>Formação atual</strong>
+                            <p class="mb-0">Ensino Médio Técnico em Tecnologia da Informação, Senac Nações Unidas.</p>
+                        </div>
+                        <div class="caixa-formacao">
+                            <strong>Objetivo de formação futura</strong>
+                            <p class="mb-0">Engenharia de Software na FIAP Paulista. Ainda não iniciei a graduação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-1">
+                    <!-- Hard skills: o nível é mostrado com honestidade (básico / iniciante) -->
+                    <div class="col-lg-6">
+                        <h3 class="subtitulo">Habilidades técnicas (Hard Skills)</h3>
+                        <ul class="lista-skills">
+                            <li><span>HTML</span> <span class="nivel">Básico</span></li>
+                            <li><span>CSS</span> <span class="nivel">Básico</span></li>
+                            <li><span>Java</span> <span class="nivel">Básico</span></li>
+                            <li><span>Python</span> <span class="nivel">Básico</span></li>
+                            <li><span>JavaScript</span> <span class="nivel">Iniciante</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft skills -->
+                    <div class="col-lg-6">
+                        <h3 class="subtitulo">Habilidades comportamentais (Soft Skills)</h3>
+                        <ul class="lista-soft">
+                            <li>Trabalho em equipe</li>
+                            <li>Comunicação</li>
+                            <li>Escuta ativa</li>
+                            <li>Capacidade de compreender e aplicar orientações</li>
+                            <li>Resolução de problemas</li>
+                            <li>Criatividade</li>
+                            <li>Persistência</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cursos e certificações -->
+                <h3 class="subtitulo mt-5">Cursos concluídos</h3>
+                <p class="texto-suave-pequeno">
+                    Cursos da Cisco Networking Academy, oferecidos pelo Senac-SP Nações Unidas.
+                </p>
+                <ul class="lista-certificados">
+                    <li class="certificado">
+                        <strong>Introdução à Cibersegurança</strong>
+                        <span>Concluído em 23/03/2026</span>
+                        <a href="assets/certificados/introducao-a-ciberseguranca.pdf" target="_blank" rel="noopener">Ver certificado (PDF)</a>
+                    </li>
+                    <li class="certificado">
+                        <strong>Fundamentos do Python 1</strong>
+                        <span>Concluído em 11/09/2026</span>
+                        <span class="id-certificado">ID: f93bd90a-9c50-438c-a78d-22e4aaf48f68</span>
+                        <a href="assets/certificados/fundamentos-do-python-1.pdf" target="_blank" rel="noopener">Ver certificado (PDF)</a>
+                    </li>
+                    <li class="certificado">
+                        <strong>Sensibilização para a Segurança Digital</strong>
+                        <span>Concluído em 28/09/2026</span>
+                        <span class="id-certificado">ID: 299afa0b-4024-423b-ac3c-41dd91b2df42</span>
+                        <a href="assets/certificados/sensibilizacao-seguranca-digital.pdf" target="_blank" rel="noopener">Ver certificado (PDF)</a>
+                    </li>
+                </ul>
+
+                <!-- Links de contato -->
+                <div class="links-contato mt-4">
+                    <a href="mailto:fernando.sortes@outlook.com" class="btn btn-outline-escuro">fernando.sortes@outlook.com</a>
+                    <a href="https://github.com/FernandoSortes" target="_blank" rel="noopener" class="btn btn-outline-escuro">github.com/FernandoSortes</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 2) ÁREAS DO CONHECIMENTO (4 seções) ================= -->
+        <section id="conhecimento" class="secao secao-clara">
+            <div class="container">
+                <h2 class="titulo-secao">Áreas do Conhecimento</h2>
+                <p class="introducao-secao">
+                    As disciplinas do Ensino Médio também me ajudaram a desenvolver a lógica de programação.
+                    Veja como cada área contribuiu.
+                </p>
+            </div>
+
+            <!-- Seção 1 -->
+            <div id="humanas" class="area">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <h3>Ciências Humanas</h3>
+                            <p class="disciplinas">História, Geografia, Filosofia e Sociologia</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                As aulas de Humanas me ajudaram a entender o contexto por trás das coisas: por que um fato
+                                aconteceu e quais foram as consequências. Também aprendi a ler textos com atenção, comparar
+                                pontos de vista e defender uma opinião com argumentos.
+                            </p>
+                            <p>
+                                Na programação, isso aparece quando preciso entender o problema antes de escrever o código e
+                                quando penso na pessoa que vai usar o sistema. A ideia de causa e consequência é parecida com
+                                a lógica do "se isso acontecer, então faça aquilo" que uso nas condições.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 2 -->
+            <div id="natureza" class="area">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <h3>Ciências da Natureza</h3>
+                            <p class="disciplinas">Física, Química e Biologia</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                Essas disciplinas me ensinaram o método científico: observar, levantar uma hipótese, testar e
+                                analisar o resultado. Também me acostumei a trabalhar com fórmulas, unidades de medida e
+                                experimentos que precisam de organização.
+                            </p>
+                            <p>
+                                Na programação, uso essa mesma ideia ao testar meu código: quando algo não funciona, procuro a
+                                causa, mudo uma coisa de cada vez e testo de novo. Esse conhecimento também ajuda a entender
+                                como funcionam sensores, energia e tecnologias de automação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 3 -->
+            <div id="matematica" class="area">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <h3>Matemática</h3>
+                            <p class="disciplinas">Álgebra, funções, porcentagem e gráficos</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                A Matemática foi a disciplina que mais treinou meu raciocínio lógico. Resolver problemas passo
+                                a passo, trabalhar com equações, funções e gráficos exige organização e atenção aos detalhes.
+                            </p>
+                            <p>
+                                Isso se conecta diretamente com a programação: as variáveis lembram as incógnitas, as funções do
+                                código lembram as funções matemáticas, e um algoritmo é uma sequência de passos, como na
+                                resolução de um problema.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção 4 -->
+            <div id="linguagens" class="area">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <h3>Linguagens</h3>
+                            <p class="disciplinas">Língua Portuguesa e Língua Inglesa</p>
+                        </div>
+                        <div class="col-md-8">
+                            <p>
+                                Português e Inglês me ajudaram a escrever com clareza, interpretar enunciados e me comunicar
+                                melhor. O inglês é importante porque grande parte da documentação e dos termos de programação
+                                está nesse idioma.
+                            </p>
+                            <p>
+                                Na programação, escrever um código claro é parecido com escrever um bom texto: usar nomes fáceis
+                                de entender, organizar as ideias e comentar o que é importante para outras pessoas
+                                entenderem. Isso também ajuda a explicar meu trabalho e a atuar em equipe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 3) TENDÊNCIAS TECNOLÓGICAS (4 seções) ================= -->
+        <section id="tendencias" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Tendências Tecnológicas</h2>
+                <p class="introducao-secao">
+                    Quatro temas que estão mudando a forma como a tecnologia é usada e que me interessam como futuro desenvolvedor.
+                </p>
+
+                <!-- A grade (grid) dessas 4 seções está no style.css -->
+                <div class="grade-tendencias">
+
+                    <section id="ciberseguranca" class="cartao-tendencia">
+                        <h3>Cibersegurança</h3>
+                        <h4>O que é</h4>
+                        <p>É o conjunto de práticas para proteger computadores, redes, sistemas e dados contra ataques e acessos indevidos.</p>
+                        <h4>Como funciona</h4>
+                        <p>Usa senhas fortes, verificação em duas etapas, criptografia (que embaralha os dados para que só quem tem a chave consiga ler), firewalls, antivírus e atualizações constantes dos sistemas.</p>
+                        <h4>Onde é utilizada</h4>
+                        <p>Em bancos, hospitais, órgãos do governo, empresas, lojas virtuais e também no celular de qualquer pessoa.</p>
+                        <h4>Importância</h4>
+                        <p>Sem segurança, dados pessoais e financeiros podem ser roubados. Hoje existem leis, como a LGPD, que obrigam as empresas a proteger as informações das pessoas.</p>
+                    </section>
+
+                    <section id="blockchain" class="cartao-tendencia">
+                        <h3>Blockchain</h3>
+                        <h4>O que é</h4>
+                        <p>É um tipo de registro digital em que as informações são guardadas em blocos ligados uns aos outros, formando uma "corrente".</p>
+                        <h4>Como funciona</h4>
+                        <p>Cada bloco guarda dados e uma identificação ligada ao bloco anterior. A cópia do registro fica espalhada em vários computadores, e todos precisam concordar para que algo novo seja incluído. Por isso é muito difícil alterar um dado depois de gravado.</p>
+                        <h4>Onde é utilizada</h4>
+                        <p>Nas criptomoedas, em contratos digitais automáticos, no rastreamento de produtos (da origem até a loja) e na emissão de certificados.</p>
+                        <h4>Importância</h4>
+                        <p>Aumenta a transparência e a confiança entre as partes sem depender de um único intermediário.</p>
+                    </section>
+
+                    <section id="automacao" class="cartao-tendencia">
+                        <h3>Automação e Robótica</h3>
+                        <h4>O que é</h4>
+                        <p>Automação é fazer máquinas ou programas realizarem tarefas com pouca ajuda humana. Robótica é a área que cria e controla robôs.</p>
+                        <h4>Como funciona</h4>
+                        <p>Um robô usa sensores para perceber o ambiente, um programa que toma decisões e motores que executam os movimentos. Na automação de software, o computador repete tarefas seguindo regras definidas.</p>
+                        <h4>Onde é utilizada</h4>
+                        <p>Em fábricas, centros de distribuição, agricultura, medicina (cirurgias assistidas) e em tarefas de escritório, como o envio automático de e-mails.</p>
+                        <h4>Importância</h4>
+                        <p>Aumenta a produtividade, reduz erros e afasta pessoas de tarefas perigosas ou repetitivas. Também exige que os profissionais aprendam novas habilidades.</p>
+                    </section>
+
+                    <section id="edge" class="cartao-tendencia">
+                        <h3>Edge Computing</h3>
+                        <h4>O que é</h4>
+                        <p>É processar os dados perto de onde eles são gerados (na "borda" da rede), em vez de enviar tudo para um servidor distante na nuvem.</p>
+                        <h4>Como funciona</h4>
+                        <p>Equipamentos próximos ao local, como um dispositivo, um roteador especial ou um pequeno servidor, analisam os dados na hora e só enviam para a nuvem o que for necessário.</p>
+                        <h4>Onde é utilizada</h4>
+                        <p>Em câmeras de segurança inteligentes, carros com tecnologia de assistência, fábricas conectadas, dispositivos de Internet das Coisas (IoT) e redes 5G.</p>
+                        <h4>Importância</h4>
+                        <p>Diminui o tempo de resposta, economiza internet e ajuda a proteger a privacidade, pois menos dados precisam viajar pela rede.</p>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 4) GALERIA DE PROJETOS ================= -->
+        <!-- ATENÇÃO: os links "Ver repositório" abaixo apontam para o repositório atual
+             (https://github.com/FernandoSortes/tudo). Depois de reorganizar o GitHub,
+             troque os endereços (veja o passo a passo no README.md). -->
+        <section id="projetos" class="secao secao-clara">
+            <div class="container">
+                <h2 class="titulo-secao">Galeria de Projetos</h2>
+                <p class="introducao-secao">
+                    Trabalhos feitos durante o curso. A maioria são exercícios de aula de HTML e CSS, apresentados como
+                    o que são: etapas do meu aprendizado. O destaque é o VerdeVivo, um projeto maior.
+                </p>
+
+                <!-- ---------- Projeto em destaque: VerdeVivo ---------- -->
+                <h3 class="subtitulo">Projeto em destaque</h3>
+                <article class="card projeto-destaque mb-5">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="assets/projetos/11-verdevivo-ecommerce.jpg" class="img-projeto"
+                                 alt="Captura de tela da página inicial do VerdeVivo, com categorias e produtos de jardinagem" loading="lazy">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h4 class="card-title">VerdeVivo: Loja Virtual de Jardinagem</h4>
+                                <p class="card-text">
+                                    Projeto acadêmico de loja virtual de jardinagem que desenvolvi anteriormente. Na versão
+                                    original, possui catálogo de produtos com busca e filtro, carrinho de compras, área
+                                    administrativa com gerenciamento de estoque, pedidos e categorias, e integração com banco de dados.
+                                </p>
+                                <p class="card-text small text-secondary">
+                                    Projeto independente: usa tecnologias diferentes das exigidas neste portfólio
+                                    (PHP e MySQL), por isso seu código não foi incorporado aqui.
+                                </p>
+                                <p class="tecnologias">
+                                    <span class="badge-tec">PHP</span>
+                                    <span class="badge-tec">MySQL / MariaDB (PDO)</span>
+                                    <span class="badge-tec">Bootstrap</span>
+                                    <span class="badge-tec">JavaScript</span>
+                                </p>
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois para o repositório "verdevivo") -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/11-verdevivo-ecommerce"
+                                   target="_blank" rel="noopener" class="btn btn-principal-escuro">Ver repositório</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ---------- Exercícios mais visuais ---------- -->
+                <h3 class="subtitulo">Exercícios de CSS em destaque</h3>
+                <div class="row g-4 mb-5">
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card card-projeto h-100">
+                            <img src="assets/projetos/10-layout-flexbox.png" class="img-projeto" alt="Captura de tela do exercício Layout com Flexbox" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Layout com Flexbox</h4>
+                                <p class="card-text">Contêiner com <code>display: flex</code> organizando três caixas lado a lado, com bordas e margens.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span> <span class="badge-tec">CSS</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/10-layout-flexbox" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card card-projeto h-100">
+                            <img src="assets/projetos/09-box-model-css.png" class="img-projeto" alt="Captura de tela do exercício Box Model com CSS" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Box Model com CSS</h4>
+                                <p class="card-text">Três caixas com largura, altura, borda tracejada e cor de fundo, além de imagens ajustadas ao tamanho de cada caixa.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span> <span class="badge-tec">CSS</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/09-box-model-css" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card card-projeto h-100">
+                            <img src="assets/projetos/05-estilizacao-css.png" class="img-projeto" alt="Captura de tela do exercício Estilização de Páginas com CSS" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Estilização de Páginas com CSS</h4>
+                                <p class="card-text">Página estilizada com CSS: cor e alinhamento do título, fonte do texto e imagem de fundo posicionada.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span> <span class="badge-tec">CSS</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/05-estilizacao-css" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ---------- Demais exercícios (cartões menores) ---------- -->
+                <h3 class="subtitulo">Outros exercícios de aula</h3>
+                <div class="row g-3">
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/04-introducao-css.png" class="img-projeto" alt="Captura de tela do exercício Introdução ao CSS" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Introdução ao CSS</h4>
+                                <p class="card-text">Primeiro contato com CSS: folha de estilo externa ligada ao HTML e fundo com degradê de várias cores.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span> <span class="badge-tec">CSS</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/04-introducao-css" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/06-site-multiplas-paginas.png" class="img-projeto" alt="Captura de tela do exercício Site com Múltiplas Páginas" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Site com Múltiplas Páginas</h4>
+                                <p class="card-text">Site com 8 páginas (inicial e uma para cada disciplina), ligadas por um menu de navegação feito com lista.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/06-site-multiplas-paginas" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/07-formulario-gestao-academica.png" class="img-projeto" alt="Captura de tela do exercício Formulário de Gestão Acadêmica" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Formulário de Gestão Acadêmica</h4>
+                                <p class="card-text">Formulário de manutenção de usuário de um sistema acadêmico: login, senha, status, tipo, perfil e módulos.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/07-formulario-gestao-academica" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/03-formularios-html.png" class="img-projeto" alt="Captura de tela do exercício Formulários HTML" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Formulários HTML</h4>
+                                <p class="card-text">Campos de e-mail e senha, caixas de seleção, botões de opção, data e hora, cor, número com limites e envio de arquivo.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/03-formularios-html" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/02-navegacao-html.png" class="img-projeto" alt="Captura de tela do exercício Navegação e Links entre Páginas" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Navegação e Links entre Páginas</h4>
+                                <p class="card-text">Links para partes da mesma página, para outras páginas do site e para endereços externos, na mesma aba ou em nova aba.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/02-navegacao-html" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/08-formatacao-html.png" class="img-projeto" alt="Captura de tela do exercício Formatação de Conteúdo HTML" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Formatação de Conteúdo HTML</h4>
+                                <p class="card-text">Quebras de linha, imagem alinhada ao texto, texto pré-formatado e cor de fundo da página.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/08-formatacao-html" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <article class="card card-projeto card-pequeno h-100">
+                            <img src="assets/projetos/01-introducao-html.png" class="img-projeto" alt="Captura de tela do exercício Introdução ao HTML" loading="lazy">
+                            <div class="card-body">
+                                <h4 class="card-title">Introdução ao HTML</h4>
+                                <p class="card-text">Primeiro exercício de HTML: títulos de h1 a h6, texto em itálico, negrito e sublinhado, texto pré-formatado e linha horizontal.</p>
+                                <p class="tecnologias"><span class="badge-tec">HTML</span></p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- LINK DO REPOSITÓRIO (atualizar depois) -->
+                                <a href="https://github.com/FernandoSortes/tudo/tree/main/01-introducao-html" target="_blank" rel="noopener" class="link-repo">Ver repositório</a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 5) CONTATO ================= -->
+        <section id="contato" class="secao">
+            <div class="container">
+                <h2 class="titulo-secao">Contato</h2>
+                <p class="introducao-secao">Quer conversar sobre uma oportunidade ou tirar uma dúvida? Envie uma mensagem.</p>
+
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <!-- novalidate: a validação é feita por mim no contato.js, para mostrar mensagens em português -->
+                        <form id="form-contato" novalidate>
+
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" autocomplete="name">
+                                <div class="invalid-feedback" id="erro-nome"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email" autocomplete="email">
+                                <div class="invalid-feedback" id="erro-email"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="assunto" class="form-label">Assunto</label>
+                                <input type="text" class="form-control" id="assunto" name="assunto">
+                                <div class="invalid-feedback" id="erro-assunto"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="5"></textarea>
+                                <div class="invalid-feedback" id="erro-mensagem"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-principal-escuro" id="botao-enviar">Enviar mensagem</button>
+
+                            <!-- Aqui o JavaScript mostra o resultado do envio (sucesso, aviso ou erro) -->
+                            <div id="resultado-contato" class="mt-3" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="caixa-formacao">
+                            <strong>E-mail</strong>
+                            <p class="mb-0"><a href="mailto:fernando.sortes@outlook.com">fernando.sortes@outlook.com</a></p>
+                        </div>
+                        <div class="caixa-formacao">
+                            <strong>GitHub</strong>
+                            <p class="mb-0"><a href="https://github.com/FernandoSortes" target="_blank" rel="noopener">github.com/FernandoSortes</a></p>
+                        </div>
+                        <div class="caixa-formacao">
+                            <strong>Localização</strong>
+                            <p class="mb-0">São Paulo - SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p class="mb-0">&copy; <span id="ano">2026</span> Fernando Sortes Fernandes. Portfólio feito com HTML, CSS, JavaScript e Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Botão para voltar ao topo (aparece quando a página é rolada) -->
+    <button type="button" id="botao-topo" class="botao-topo" aria-label="Voltar ao topo">&uarr;</button>
+
+</div>
+<!-- fim da div #site -->
+
+
+<!-- ======================================================
+     PAINEL ADMINISTRATIVO (OCULTO)
+     Não existe nenhum link para ele no menu.
+     Para abrir, acesse:  index.html#admin
+     A senha de demonstração está explicada no README.md
+     ====================================================== -->
+<section id="admin" class="admin d-none">
+    <div class="container py-4">
+
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h2 class="mb-0">Painel administrativo</h2>
+            <a href="#inicio" class="btn btn-outline-escuro btn-sm">Voltar ao site</a>
+        </div>
+
+        <!-- Tela de senha -->
+        <div id="admin-login">
+            <form id="form-admin-login" class="caixa-login" novalidate>
+                <label for="admin-senha" class="form-label">Senha de acesso (demonstração)</label>
+                <input type="password" class="form-control mb-2" id="admin-senha" autocomplete="off">
+                <div id="admin-erro-login" class="text-danger small mb-2"></div>
+                <button type="submit" class="btn btn-principal-escuro">Entrar</button>
+            </form>
+        </div>
+
+        <!-- Painel (só aparece depois de digitar a senha) -->
+        <div id="admin-painel" class="d-none">
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <p class="mb-0 fw-semibold" id="admin-contador"></p>
+                <button type="button" class="btn btn-outline-secondary btn-sm" id="botao-sair-admin">Sair do painel</button>
+            </div>
+
+            <div id="admin-aviso" role="status" aria-live="polite"></div>
+
+            <!-- LER: lista de todas as mensagens -->
+            <div class="table-responsive">
+                <table class="table table-hover align-middle tabela-mensagens">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Nome</th>
+                            <th>Assunto</th>
+                            <th>Data</th>
+                            <th>Origem</th>
+                            <th>E-mail enviado?</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-lista"></tbody>
+                </table>
+            </div>
+
+            <!-- Detalhes de uma mensagem -->
+            <div id="admin-detalhes" class="card caixa-admin d-none">
+                <div class="card-body">
+                    <h3 class="h5">Detalhes da mensagem</h3>
+                    <div id="admin-detalhes-conteudo"></div>
+                    <button type="button" class="btn btn-outline-secondary btn-sm mt-3" id="botao-fechar-detalhes">Fechar</button>
+                </div>
+            </div>
+
+            <!-- ATUALIZAR: formulário de edição -->
+            <div id="admin-edicao" class="card caixa-admin d-none">
+                <div class="card-body">
+                    <h3 class="h5">Editar mensagem</h3>
+                    <form id="form-admin-edicao" novalidate>
+                        <input type="hidden" id="edit-id">
+
+                        <div class="mb-2">
+                            <label for="edit-nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="edit-nome">
+                        </div>
+                        <div class="mb-2">
+                            <label for="edit-email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="edit-email">
+                        </div>
+                        <div class="mb-2">
+                            <label for="edit-assunto" class="form-label">Assunto</label>
+                            <input type="text" class="form-control" id="edit-assunto">
+                        </div>
+                        <div class="mb-2">
+                            <label for="edit-mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="edit-mensagem" rows="4"></textarea>
+                        </div>
+
+                        <div id="admin-erros-edicao" class="text-danger small mb-2"></div>
+
+                        <button type="submit" class="btn btn-principal-escuro btn-sm">Salvar alterações</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="botao-cancelar-edicao">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SCRIPTS (a ordem importa!) ================= -->
+<!-- 1) Bootstrap (JavaScript): faz o menu do celular e os menus suspensos funcionarem -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- 2) EmailJS: serviço que envia o e-mail de notificação (configuração no README.md) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- 3) Meus arquivos JavaScript -->
+<script src="js/script.js"></script>   <!-- funcionalidades gerais da interface -->
+<script src="js/contato.js"></script>  <!-- formulário, validação e LocalStorage -->
+<script src="js/admin.js"></script>    <!-- painel administrativo (usa funções do contato.js) -->
+</body>
+</html>
